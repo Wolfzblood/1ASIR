@@ -1,0 +1,15 @@
+Actividad 5.4. Indicar la expresión XPath que permita obtener los nodos que corresponden al segundo elemento nombre de otro elemento
+//nombre[2]  --> no devuelve nada ya que no hay elementos <nombre> en segunda posición dentro de otro elemento
+
+
+Actividad 5.5. Indicar la expresión XPath que permita obtener los nodos que corresponden al último elemento nombre de otro elemento
+//nombre[last()]
+
+
+Actividad 5.6. Indicar la expresión XPath que permita obtener los elementos <nombre> cuyo valor es "María Peña Vélez"	
+//nombre[.="María Peña Vélez"]  
+
+Actividad 5.7. Indicar la expresión XPath que permita obtener los elementos <cliente> con localización en ciudad de Madrid y que tienen persona de contacto con teléfono
+//cliente[localizacion[@ciudad="Madrid"] and personacontacto[@telefono]]
+Solución 2:
+//cliente[localizacion[@ciudad="Madrid"]] [personacontacto[@telefono]

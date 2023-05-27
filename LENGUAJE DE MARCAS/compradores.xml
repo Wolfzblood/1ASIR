@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<compradores>
+   <cliente>
+      <nombre>Servicios Integrales S.L.</nombre>
+      <personacontacto>Juan Romero Álvarez</personacontacto>
+      <localizacion ciudad="Madrid"/>
+   </cliente>
+   <cliente>
+      <nombre>Peña y asociados</nombre>
+      <personacontacto telefono="626532773">María Peña Vélez</personacontacto>
+      <localizacion ciudad="Fuenlabrada"/>
+   </cliente>
+   <cliente>
+      <nombre>María Peña Vélez</nombre>
+      <personacontacto telefono="626532773">María Peña Vélez</personacontacto>
+      <localizacion ciudad="Madrid"/>
+   </cliente>
+</compradores>

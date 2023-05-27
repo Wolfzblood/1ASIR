@@ -1,0 +1,1 @@
+/dinosaurios/dinosaurio[nombre='Triceratops']/longitud | /dinosaurios/dinosaurio[nombre='Triceratops']/altura

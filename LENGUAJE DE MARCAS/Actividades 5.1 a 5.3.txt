@@ -1,0 +1,10 @@
+Actividad 5.1. Indicar la expresión XPath para obtener todos los nodos <nombre> de los clientes que contiene el fichero XML de trabajo
+/compradores/cliente/nombre
+Solución 2:
+//nombre
+
+Actividad 5.2. Indicar la expresión XPath para obtener todos los nodos para los que está definido el atributo teléfono
+//@telefono/..
+
+Actividad 5.3. Indicar la expresión XPath para obtener todos los nodos <nombre> y <localización>
+//nombre | //localizacion

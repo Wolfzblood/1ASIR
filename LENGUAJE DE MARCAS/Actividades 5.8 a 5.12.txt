@@ -1,0 +1,24 @@
+Actividad 5.8. Indicar la expresión XPath que permita obtener los nodos hijos del primer elemento cliente
+//cliente[1]/node() 
+
+
+Actividad 5.9. Indicar la expresión XPath que permita obtener los nodos hijos de los elementos localizacion
+//localizacion/node() --> No devuelve nada ya que los atributos no son nodos hijos (se consideran etiquetas adosadas) 
+
+
+Actividad 5.10. Indicar la expresión XPath que permita obtener los elementos cuyo valor es "María Peña Vélez"	
+//*[.="María Peña Vélez"]  
+
+
+Actividad 5.11. Indicar la expresión XPath que permita obtener el valor de todos los atributos del elemento localización
+//localizacion/@*
+
+
+Actividad 5.12. Indicar la expresión XPath que permita obtener el valor de todos los elementos y atributos del documento
+//*/text() | //@*
+
+
+Actividad 5.13. Indicar la expresión XPath que permita obtener el nombre (el valor del elemento) de los clientes cuya localización es Madrid
+//cliente/localizacion[@ciudad = "Madrid"]/../nombre/text()
+
+

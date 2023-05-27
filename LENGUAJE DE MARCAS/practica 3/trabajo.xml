@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Definición de una estructura para almacenar información sobre dinosaurios -->
+
+<!DOCTYPE dinosaurios [
+
+  <!-- Definición de los elementos que se usan en la estructura -->
+
+  <!ELEMENT dinosaurios (dinosaurio+)>
+  <!ELEMENT dinosaurio (nombre, altura, longitud, peso, periodo)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT altura (#PCDATA)>
+  <!ELEMENT longitud (#PCDATA)>
+  <!ELEMENT peso (#PCDATA)>
+  <!ELEMENT periodo (#PCDATA)>
+  
+  <!ATTLIST dinosaurio
+    id CDATA #REQUIRED
+  >
+
+]>
+
+<!-- Elemento raíz del documento -->
+
+<dinosaurios>
+
+  <!-- Primer dinosaurio -->
+
+  <dinosaurio id="001">
+    <nombre>Stegosaurus</nombre>
+    <altura>4 metros</altura>
+    <longitud>9 metros</longitud>
+    <peso>2 toneladas</peso>
+    <periodo>Jurásico</periodo>
+  </dinosaurio>
+
+  <!-- Segundo dinosaurio -->
+
+  <dinosaurio id="002">
+    <nombre>Tyrannosaurus rex</nombre>
+    <altura>6 metros</altura>
+    <longitud>12 metros</longitud>
+    <peso>8 toneladas</peso>
+    <periodo>Cretácico</periodo>
+  </dinosaurio>
+
+  <!-- Tercer dinosaurio -->
+
+  <dinosaurio id="003">
+    <nombre>Triceratops</nombre>
+    <altura>3 metros</altura>
+    <longitud>9 metros</longitud>
+    <peso>6 toneladas</peso>
+    <periodo>Cretácico</periodo>
+  </dinosaurio>
+
+</dinosaurios>
