@@ -197,6 +197,98 @@ El elemento <xsl:element> permite incluir elementos en base a texto libre.
 
 El documento hace que se cree una lista.
 
+El elemento <xsl:atribute> permite insertar atributos de una forma más dinámica en el elemento en el que se incluye.
+```XML
+<xsl:attribute name=”nombre_atributo”>
+```
+
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match='/'>
+<html>
+	<head>
+		<title>Ejemplo 5 </title></head>
+	<body>
+	<xsl:apply-templates />
+	</body>
+</html>
+</xsl:template>
+<xsl:template match="nombre">
+	<p><xsl:attribute name="class"> destacado </xsl:attribute>
+	He encontrado una persona del grupo
+	</p>
+</xsl:template>
+</xsl:stylesheet>
+```
+
+El <xsl:copy-of>, es un elemento util cuando se pretende transformar un XML en otro documento también XML.  Permite tomar fragmentos del documento origen y traspasarlos integramente al destino, sin tener que crear los elementos.
+
+Este ejemplo muestra como crea un documento XML exactamente igual la otro, porque con el match / coge todo y el select del copy "." indica que se queda en la misma por lo que coge todo.
+
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:template match='/'>
+		<xsl:copy-of select='.'/>
+	</xsl:template>
+</xsl:stylesheet>
+```
+
+Sin embargo el <xsl:copy> realiza una copia hueca que solo copia la etiqeuta del elemento (los atributos y nodos hijos no se copian).
+
+```XML
+<xsl:copy />
+O bien
+<xsl:copy> </xsl:copy>
+```
+
+En XSLT se puede iterar (bucles), y seleccionas (condiconales).
+
+ITERACIONES
+Se usa para repetir la búsqueda de los nodos que coinciden con la expresión Xpath que se usa en el atributo select.
+```XML
+<xsl:for-each select=”expresión XPath”>
+....
+</xsl:for-each>
+```
+
+Este ejemplo muestra todos los nombres.
+```XML
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:template match='/'>
+<html>
+	<head>
+		<title>Ejemplo6 </title></head>
+	<body>
+		<xsl:for-each select="grupo/nombre">
+			<p> <xsl:value-of select="." /> </p>
+		</xsl:for-each>
+	</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>
+```
+
+Mostraria esto:
+```HTML
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+	<head>
+		<title>Ejemplo6 </title>
+	</head>
+	<body>
+		<p>Jose</p>
+		<p>Ana</p>
+		<p>Luis</p>
+		<p>Maria</p>
+	</body>
+</html>
+```
+
 
 
 
